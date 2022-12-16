@@ -1,0 +1,14 @@
+.searchBtn {
+  height: 50px;
+  width: 116px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  background: rgb(23 20 20 / 78%);
+  color: #ffffff;
+  transition: .2s ease-in;
+}
+
+.searchBtn:hover {
+  border: 1px solid white;
+}

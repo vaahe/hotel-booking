@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hind Madurai", sans-serif;
+  background-color: #6c85d6;
+}
+
+.inputBox input[value]:not([value=""])~span,
+.inputBox input:focus~span {
+  color: #f7f6e1;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #000000;
+  border-left: 1px solid #f7f6e1;
+  border-right: 1px solid #f7f6e1;
+  letter-spacing: 0.2em;
+}
+
+.inputBox .date~span {
+  color: #f7f6e1;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #000000;
+  border-left: 1px solid #f7f6e1;
+  border-right: 1px solid #f7f6e1;
+  letter-spacing: 0.2em;
+}
+
+.inputBox select~span {
+  color: #f7f6e1;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #000000;
+  border-left: 1px solid #f7f6e1;
+  border-right: 1px solid #f7f6e1;
+  letter-spacing: 0.2em;
+}
+
+.inputBox .loc~span {
+  color: #f7f6e1;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #000000;
+  border-left: 1px solid #f7f6e1;
+  border-right: 1px solid #f7f6e1;
+  letter-spacing: 0.2em;
+}
+
+.date .error {
+  color: #fc3434;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 12px;
+  padding: 0 10px;
+  background: #000000;
+  border-left: 1px solid #f04343;
+  border-right: 1px solid #c54545;
+  letter-spacing: 0.2em;
+}
+
+.inputBox .error {
+  color: #fc3434;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 12px;
+  padding: 0 10px;
+  background: #000000;
+  border-left: 1px solid #f04343;
+  border-right: 1px solid #c54545;
+  letter-spacing: 0.2em;
+}
+
+.ant-picker-dropdown .ant-picker-panel-container,
+.ant-picker-range-arrow::before {
+  background-color: rgb(23 20 20 / 78%) !important;
+}
+
+.ant-picker-panel-layout .ant-picker-panels th,
+td,
+.ant-picker-header .ant-picker-header-view {
+  color: white !important;
+}
+
+.ant-picker-header button {
+  color: white !important;
+}
+
+:where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-in-view:is( :where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-in-range)::before {
+  background: #1677ff !important;
+}
+
+:where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-in-view:is( :where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-range-end):not( :where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-range-end-single)::before {
+  background: #1677ff !important;
+}
+
+:where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-in-view:is( :where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-range-start):not( :where(.css-dev-only-do-not-override-1ij74fp).ant-picker-dropdown .ant-picker-cell-range-start-single)::before {
+  background: #1677ff;
+}
+
+.ant-picker ::placeholder {
+  color: rgba(255, 255, 255, 0.25) !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+}
+
+.ant-picker-range-separator,
+.ant-picker-suffix,
+.ant-picker-clear {
+  display: none !important;
+}
+
+.ant-picker .ant-picker-input>input {
+  color: white !important;
+}
+
+.ant-modal-footer button {
+  display: none;
+}
+
+.ant-modal-content .ant-modal-close {
+  display: none;
+}
+
+:where(.css-dev-only-do-not-override-1ij74fp).ant-modal .ant-modal-content {
+  background: rgb(23 20 20 / 78%);
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #484641;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
