@@ -39,7 +39,7 @@ const AllHotels = ({ data, show }) => {
         <div className="mt-5 text-center md:col-start-4 md:col-span-2 lg:col-start-6">
           <button
             onClick={countIncrement}
-            className=" button1 h-12 w-28 rounded text-white bg-black/70 hover:border-2 active:border-2 hover:bg-black active:bg-black"
+            className=" button1 h-12 w-28 rounded text-white mb-8 bg-black/70 hover:border-2 active:border-2 hover:bg-black active:bg-black"
           >
             View More
           </button>

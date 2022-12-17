@@ -51,7 +51,7 @@ const SingleHotel = () => {
     setLoading(true);
 
     let res = await getSessionId(auth.token, params.id);
-    console.log("get sessionid resposne", res.data.sessionId);
+    console.log("get session ID response", res.data.sessionId);
 
     const stripe = await loadStripe(`${import.meta.env.VITE_APP_STRIPE_KEY}`);
 
@@ -59,7 +59,7 @@ const SingleHotel = () => {
       .redirectToCheckout({
         sessionId: res.data.sessionId,
       })
-      .then((result) => console.log("Shitak e)) ", result));
+      .then((result) => console.log("Ok)) ", result));
   };
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const SingleHotel = () => {
     <div ref={myRef}>
       {Object.keys(hotel).length ? (
         <div className="mt-36">
-          <div className="p-10 md:px-14 grid grid-cols-4 gap-x-8 md:grid-cols-8 lg:grid-cols-12 max-w-screen-2xl m-auto">
+          <div className="p-10 md:px-14 max-w-screen-2xl m-auto">
             <img
               src={`${import.meta.env.VITE_APP_API}/hotel/image/${params.id}`}
               alt={hotel.title}
@@ -108,7 +108,7 @@ const SingleHotel = () => {
             </div>
             <div className="my-10 border border-gray-300 col-span-4 md:col-span-6 lg:col-span-10"></div>
 
-            <div className="space-y-9 md:space-y-0 md:space-x-9 col-span-4 md:flex">
+            <div className="flex md:space-y-0 w-full md:space-x-9 col-span-4 md:flex">
               <div className="space-y-9">
                 <div className="flex items-center">
                   <BiBed className="w-12 h-10 mr-5" />
@@ -124,8 +124,6 @@ const SingleHotel = () => {
                     <p className="text-gray-600">{hotel.bed * 2} Guests</p>
                   </div>
                 </div>
-              </div>
-              <div className="space-y-9">
                 <div className="flex items-center">
                   <GiResize className="w-12 h-9 mr-5" />
                   <div>
@@ -141,25 +139,25 @@ const SingleHotel = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className=" text-gray-600 col-span-4 mt-12 md:col-span-6 lg:col-span-10">
-              {hotel.content}
+              <div className="text-2xl">
+                {hotel.content}
+              </div>
             </div>
 
-            <button
-              disabled={loading || alreadyBooked}
-              className="bg-headerbg text-white cursor-pointer hover:bg-black md:col-span-3 md:col-start-4 lg:col-start-8 rounded-xl py-3 col-span-4 mt-6"
-              onClick={handleBooking}
-            >
-              {loading
-                ? "Loading..."
-                : alreadyBooked
-                  ? "Already Booked"
-                  : auth && auth.token
-                    ? "Book Now"
-                    : "Login to Book"}
-            </button>
           </div>
+          <button
+            disabled={loading || alreadyBooked}
+            className="bg-headerbg mx-12 my-12 w-32 text-white cursor-pointer hover:bg-black md:col-span-3 md:col-start-4 lg:col-start-8 rounded-xl py-3 col-span-4 mt-6"
+            onClick={handleBooking}
+          >
+            {loading
+              ? "Loading..."
+              : alreadyBooked
+                ? "Already Booked"
+                : auth && auth.token
+                  ? "Book Now"
+                  : "Login to Book"}
+          </button>
         </div>
       ) : (
         <div className="h-screen flex justify-center items-center">
